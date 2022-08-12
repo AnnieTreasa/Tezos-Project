@@ -29,12 +29,12 @@ const Navbar = () => {
           My Simple tezFunds
         </a>
         <div className="links">
-        <Link to="/">Home</Link>
+        <div><Link to="/">Home</Link>   </div>
         <Link to="/create" style={{ 
           color: 'white', 
           backgroundColor: '#f1356d',
           borderRadius: '8px' 
-         }}>New Blog</Link>
+         }}>New Profile</Link>
       </div>
         <div className="d-flex">
           {/* TODO 4.b - Call connectWallet function onClick  */}

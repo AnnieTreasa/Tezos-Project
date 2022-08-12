@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import Home from './components/Home';
+//import Home from './components/Home';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Create from './components/create';
@@ -31,7 +31,14 @@ const App = () => {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Home />
+            <div className="d-flex flex-column justify-content-center align-items-center h-100">
+            {/* Action Buttons */}
+            <button onClick={ongiveFund} className="btn btn-primary btn-lg">
+              {/* TODO 7.b - Call onBuyTicket on click */}
+              {/* TODO 7.c - Show "loading..." when buying operation is pending */}
+              {loading ? "Loading..." : "Give fund"}
+            </button>
+            </div >
             </Route>
             <Route path="/create">
               <Create />
@@ -45,15 +52,6 @@ const App = () => {
           </Switch>
         </div>
       </div>
-      <div className="d-flex flex-column justify-content-center align-items-center h-100">
-            {/* Action Buttons */}
-            <button onClick={ongiveFund} className="btn btn-primary btn-lg">
-              {/* TODO 7.b - Call onBuyTicket on click */}
-              {/* TODO 7.c - Show "loading..." when buying operation is pending */}
-              {loading ? "Loading..." : "Give fund"}
-            </button>
-
-      </div >
     </Router>
     
     

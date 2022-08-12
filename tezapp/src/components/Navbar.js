@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { connectWallet, getAccount } from "../utils/wallet";
 
+import { Link } from "react-router-dom";
+
+ 
 const Navbar = () => {
   const [account, setAccount] = useState("");
 
@@ -20,11 +23,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-dark bg-dark fixed-top">
       <div className="container py-2">
         <a href="/" className="navbar-brand">
           My Simple tezFunds
         </a>
+        <div className="links">
+        <Link to="/">Home</Link>
+        <Link to="/create" style={{ 
+          color: 'white', 
+          backgroundColor: '#f1356d',
+          borderRadius: '8px' 
+         }}>New Blog</Link>
+      </div>
         <div className="d-flex">
           {/* TODO 4.b - Call connectWallet function onClick  */}
           <button onClick={onConnectWallet} className="btn btn-outline-info">
@@ -33,7 +44,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

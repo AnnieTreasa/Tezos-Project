@@ -3,7 +3,7 @@ import { connectWallet, getAccount } from "../utils/wallet";
 
 import { Link } from "react-router-dom";
 
- 
+
 const Navbar = () => {
   const [account, setAccount] = useState("");
 
@@ -23,19 +23,23 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-dark bg-dark">
       <div className="container py-2">
         <a href="/" className="navbar-brand">
-          My Simple tezFunds
+          My Simple TezFunds
         </a>
+
         <div className="links">
-        <div><Link to="/">Home</Link>   </div>
-        <Link to="/create" style={{ 
-          color: 'white', 
-          backgroundColor: '#f1356d',
-          borderRadius: '8px' 
-         }}>New Profile</Link>
-      </div>
+          <div>
+            <Link to="/create">Invest</Link>
+          </div>
+
+          <div>
+            <Link to="/create">Add your Project</Link>
+          </div>
+        </div>
+
+
         <div className="d-flex">
           {/* TODO 4.b - Call connectWallet function onClick  */}
           <button onClick={onConnectWallet} className="btn btn-outline-info">

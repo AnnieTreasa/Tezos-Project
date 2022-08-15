@@ -4,6 +4,8 @@ program code in branch master
 
 **deployed app link** : https://neon-sunshine-71e5cf.netlify.app/  
 **video** : https://drive.google.com/file/d/1XLuIm_ZdujeYjXhoqh2q-WPWfkTmqIjO/view?usp=sharing
+#### Contract address : KT1AdnJw5wbdH2o3f3mBcamgmd1t7hhKSWqA
+https://api.ghostnet.tzkt.io/v1/contracts/KT1AdnJw5wbdH2o3f3mBcamgmd1t7hhKSWqA/storage
 
 # My Simple TezFunds
 

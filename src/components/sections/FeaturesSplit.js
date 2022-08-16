@@ -71,7 +71,7 @@ const FeaturesSplit = ({
   const [from_address, setfrom_address] = useState('');
   const [to_puid, setto_uuid] = useState('');
   const [comment, setcomment] = useState('');
-  const [amount, setamount] = useState('');
+  const [amount, setamount] = useState(0);
   const [name, setname] = useState('');
   const [desc, setdesc] = useState('');
   const [comp, setcomp] = useState('');
@@ -80,10 +80,11 @@ const FeaturesSplit = ({
   const [video, setvideo] = useState('');
   const [puuid,setpuuid] = useState('');
   const [puid, setpuid] = useState('');
-  const [goal, setgoal] = useState('');
+  const [goal, setgoal] = useState(0);
   const [dl, setdl] = useState('');
   const [addr, setaddr] = useState('');
   const [pic, setpic] = useState([]);
+  const [transid] = useState(0);
   //const context = useContext(AuthContext);
 
   //-----------------------input text handlers---------------------------------------------------------
@@ -191,7 +192,7 @@ const FeaturesSplit = ({
   const onfund = async () => {
     try {
       setLoading(true);
-      await giveFundOperation(from_uuid,from_address,to_puid,amount,comment);
+      await giveFundOperation(transid,from_uuid,from_address,to_puid,amount,comment);
       alert("Transaction succesful!");
     } catch (err) {
       alert(err.message);
@@ -203,8 +204,8 @@ const FeaturesSplit = ({
   const onadduser = async () => {
     try {
       setLoading(true);
-      await addNewUseraoperation(email,uuid);
-      alert("New Use Added!");
+      await addNewUseraoperation(uuid,email);
+      alert("New User Added!");
     } catch (err) {
       alert(err.message);
     }
